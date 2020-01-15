@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 2008151042837298710}
   - component: {fileID: 7847446717316996666}
   - component: {fileID: 4731837489694495959}
+  - component: {fileID: 4943050175733953296}
   m_Layer: 10
   m_Name: Maurice
   m_TagString: Player
@@ -806,6 +807,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4943050175733953296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817442758823366291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7079319a89545054b9c507e0e0fd9a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  success: 0
 --- !u!1 &1817442759476417868
 GameObject:
   m_ObjectHideFlags: 0
