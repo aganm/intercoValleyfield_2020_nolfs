@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7bc7b81da2a1f5f43b028ca203a3c9d9
+guid: 2cda88f9b7d64cf47858cefcd5ce4d62
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
       y: 4
       width: 477
       height: 609
-    spriteID: 908dc4febd6dd8f4d8b93b9aa91817e3
+    spriteID: 4b7de98d33e84394c8bedcf0f7cb7211
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -119,7 +119,7 @@ ScriptedImporter:
       y: 321
       width: 166
       height: 275
-    spriteID: 8491a430415355741a662df6bc4581f5
+    spriteID: 4c361359a57e8554097cd7c5d6abdba9
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -141,7 +141,7 @@ ScriptedImporter:
       y: 4
       width: 402
       height: 344
-    spriteID: b6bdf2bf268b34d43a91c68ee2f7aba3
+    spriteID: 3374ad40890a18e48953002bd695f193
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -163,7 +163,7 @@ ScriptedImporter:
       y: 621
       width: 112
       height: 168
-    spriteID: af7be346452f01548a06d1b32aebfa04
+    spriteID: 22b90426e28e1c8428fdda455b822b52
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -185,7 +185,7 @@ ScriptedImporter:
       y: 375
       width: 143
       height: 225
-    spriteID: 85da0da44fee985408488c0f5b813820
+    spriteID: 972d14454f93ab64ab2589c3f5dc4cd7
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -207,7 +207,7 @@ ScriptedImporter:
       y: 356
       width: 288
       height: 152
-    spriteID: ce76b1a1c461e4848be9de6bebac49a9
+    spriteID: 3b8f03915e1885c47b75a7e5a7b76815
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -229,7 +229,7 @@ ScriptedImporter:
       y: 4
       width: 247
       height: 363
-    spriteID: ccf76429ce66829429d17b6deda842ce
+    spriteID: 15948e657fe3ad94185353d08b9b41e7
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -251,7 +251,7 @@ ScriptedImporter:
       y: 4
       width: 247
       height: 363
-    spriteID: 4b531fa436dcfe04184039634ac95039
+    spriteID: 6ec6e11c0d2ebe8458fcb90e8d085590
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -273,7 +273,7 @@ ScriptedImporter:
       y: 375
       width: 230
       height: 134
-    spriteID: 1577134f243ceec45bc9e67b3b66b199
+    spriteID: 061dde2181ec4bb46b972a8740274d64
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -295,7 +295,7 @@ ScriptedImporter:
       y: 437
       width: 230
       height: 135
-    spriteID: 6bbaea0fd0942f842816c0287057280b
+    spriteID: 05d1bce602a985e4fb3ced7c46efd63c
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -317,7 +317,7 @@ ScriptedImporter:
       y: 321
       width: 132
       height: 287
-    spriteID: cf94283b2dcca3848884ea3f3f514509
+    spriteID: 1f7dcc237027f15429e47fb0174716b1
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -339,7 +339,7 @@ ScriptedImporter:
       y: 621
       width: 132
       height: 273
-    spriteID: 1c868cd695c3ce044bf4f123142c8a24
+    spriteID: 3ae62fb7bf5d1744ca03bde62d0a2108
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -361,7 +361,7 @@ ScriptedImporter:
       y: 4
       width: 220
       height: 309
-    spriteID: 97b0ecd12e2ae8245af648e3d9e4ef01
+    spriteID: 3ba0380c954360f4bb253c3c5f360694
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -383,7 +383,7 @@ ScriptedImporter:
       y: 621
       width: 204
       height: 127
-    spriteID: 57564ecd806bf4544a59ba57d6e558d8
+    spriteID: 28475cce9fd4c5142aa7733bb36a8595
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -405,7 +405,7 @@ ScriptedImporter:
       y: 4
       width: 231
       height: 425
-    spriteID: 431fa1ecb319ca64eb8e6ba5c61ac115
+    spriteID: d7ca996ccba5ad247b2907706b7ca167
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -427,7 +427,7 @@ ScriptedImporter:
       y: 4
       width: 2100
       height: 1500
-    spriteID: ff24d629f27eee74cbd7673d3aeaffc0
+    spriteID: a3ca32791a4edb14a9bd15fe81421d28
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -475,112 +475,112 @@ ScriptedImporter:
     spriteName: Layer 1
     isGroup: 0
     parentIndex: 1
-    spriteID: 908dc4febd6dd8f4d8b93b9aa91817e3
+    spriteID: 4b7de98d33e84394c8bedcf0f7cb7211
     layerID: 50
     mosaicPosition: {x: 2112, y: 4}
   - name: LeftLowerHarm
     spriteName: LeftLowerHarm
     isGroup: 0
     parentIndex: 1
-    spriteID: 8491a430415355741a662df6bc4581f5
+    spriteID: 4c361359a57e8554097cd7c5d6abdba9
     layerID: 47
     mosaicPosition: {x: 3756, y: 321}
   - name: RigthLowerHarm
     spriteName: RigthLowerHarm
     isGroup: 0
     parentIndex: 1
-    spriteID: b6bdf2bf268b34d43a91c68ee2f7aba3
+    spriteID: 3374ad40890a18e48953002bd695f193
     layerID: 14
     mosaicPosition: {x: 2597, y: 4}
   - name: LeftUpperHarm
     spriteName: LeftUpperHarm
     isGroup: 0
     parentIndex: 1
-    spriteID: af7be346452f01548a06d1b32aebfa04
+    spriteID: 22b90426e28e1c8428fdda455b822b52
     layerID: 46
     mosaicPosition: {x: 2464, y: 621}
   - name: RightUpperHarm
     spriteName: RightUpperHarm
     isGroup: 0
     parentIndex: 1
-    spriteID: 85da0da44fee985408488c0f5b813820
+    spriteID: 972d14454f93ab64ab2589c3f5dc4cd7
     layerID: 13
     mosaicPosition: {x: 3246, y: 375}
   - name: ceintureSketch
     spriteName: ceintureSketch
     isGroup: 0
     parentIndex: 1
-    spriteID: ce76b1a1c461e4848be9de6bebac49a9
+    spriteID: 3b8f03915e1885c47b75a7e5a7b76815
     layerID: 20
     mosaicPosition: {x: 2597, y: 356}
   - name: RigthUpperFoot
     spriteName: RigthUpperFoot
     isGroup: 0
     parentIndex: 1
-    spriteID: ccf76429ce66829429d17b6deda842ce
+    spriteID: 15948e657fe3ad94185353d08b9b41e7
     layerID: 10
     mosaicPosition: {x: 3246, y: 4}
   - name: Leftfoot
     spriteName: Leftfoot
     isGroup: 0
     parentIndex: 1
-    spriteID: 4b531fa436dcfe04184039634ac95039
+    spriteID: 6ec6e11c0d2ebe8458fcb90e8d085590
     layerID: 53
     mosaicPosition: {x: 3501, y: 4}
   - name: LeftShoe
     spriteName: LeftShoe
     isGroup: 0
     parentIndex: 1
-    spriteID: 1577134f243ceec45bc9e67b3b66b199
+    spriteID: 061dde2181ec4bb46b972a8740274d64
     layerID: 48
     mosaicPosition: {x: 3501, y: 375}
   - name: RigthShoe
     spriteName: RigthShoe
     isGroup: 0
     parentIndex: 1
-    spriteID: 6bbaea0fd0942f842816c0287057280b
+    spriteID: 05d1bce602a985e4fb3ced7c46efd63c
     layerID: 12
     mosaicPosition: {x: 3007, y: 437}
   - name: LeftLowerFoot
     spriteName: LeftLowerFoot
     isGroup: 0
     parentIndex: 1
-    spriteID: cf94283b2dcca3848884ea3f3f514509
+    spriteID: 1f7dcc237027f15429e47fb0174716b1
     layerID: 49
     mosaicPosition: {x: 3930, y: 321}
   - name: RigthLowerFoot
     spriteName: RigthLowerFoot
     isGroup: 0
     parentIndex: 1
-    spriteID: 1c868cd695c3ce044bf4f123142c8a24
+    spriteID: 3ae62fb7bf5d1744ca03bde62d0a2108
     layerID: 11
     mosaicPosition: {x: 2112, y: 621}
   - name: Branch1
     spriteName: Branch1
     isGroup: 0
     parentIndex: 1
-    spriteID: 97b0ecd12e2ae8245af648e3d9e4ef01
+    spriteID: 3ba0380c954360f4bb253c3c5f360694
     layerID: 21
     mosaicPosition: {x: 3756, y: 4}
   - name: Branch2
     spriteName: Branch2
     isGroup: 0
     parentIndex: 1
-    spriteID: 57564ecd806bf4544a59ba57d6e558d8
+    spriteID: 28475cce9fd4c5142aa7733bb36a8595
     layerID: 22
     mosaicPosition: {x: 2252, y: 621}
   - name: Chest
     spriteName: Chest
     isGroup: 0
     parentIndex: 1
-    spriteID: 431fa1ecb319ca64eb8e6ba5c61ac115
+    spriteID: d7ca996ccba5ad247b2907706b7ca167
     layerID: 8
     mosaicPosition: {x: 3007, y: 4}
   - name: Layer 0
     spriteName: Layer 0
     isGroup: 0
     parentIndex: -1
-    spriteID: ff24d629f27eee74cbd7673d3aeaffc0
+    spriteID: a3ca32791a4edb14a9bd15fe81421d28
     layerID: 5
     mosaicPosition: {x: 4, y: 4}
   characterData:

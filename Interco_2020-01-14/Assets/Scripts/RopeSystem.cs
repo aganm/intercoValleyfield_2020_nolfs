@@ -241,7 +241,7 @@ public class RopeSystem : MonoBehaviour
                         }
                 }
 
-                if (Input.GetMouseButton(1))
+                if (Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.W))
                 {
             AudioSource.Stop();
                         ResetRope();
