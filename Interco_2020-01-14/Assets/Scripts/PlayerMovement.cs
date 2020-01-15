@@ -57,6 +57,26 @@ public class PlayerMovement : MonoBehaviour
 
         var halfHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y;
         groundCheck = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - halfHeight - 0.04f), Vector2.down, 0.025f);
+
+        if (!isSwinging) //Nest pas en train de se balancer
+        {
+
+            isJumping = Input.GetKeyDown(KeyCode.W);
+            if (isJumping && !groundCheck && extraJumps > 0)
+            {
+                rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump
+                extraJumps--;
+            }
+            else if (isJumping && groundCheck)
+            {
+                rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump 
+            }
+
+            if (groundCheck)
+            {
+                extraJumps = extraJumpsValue;
+            }
+        }
     }
 
     void FixedUpdate()
@@ -103,8 +123,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 animator.SetBool("IsSwinging", false);
-                if (groundCheck) //Si touche le sol
-                {
+
                     var groundForce = speed * 2f;
 
                     rBody.AddForce(new Vector2((horizontalInput * groundForce - rBody.velocity.x) * groundForce, 0));
@@ -112,14 +131,8 @@ public class PlayerMovement : MonoBehaviour
 
                     if (horizontalInput != 0 && !AudioSource.isPlaying)
                     {
-                        int random = Random.Range(0, 4);
-                        if (random == 0) AudioSource.PlayOneShot(walkingClips[0]);
-                        else if (random == 1) AudioSource.PlayOneShot(walkingClips[1]);
-                        else if (random == 2) AudioSource.PlayOneShot(walkingClips[2]);
-                        else if (random == 3) AudioSource.PlayOneShot(walkingClips[3]);
+                        AudioSource.PlayOneShot(walkingClips[Random.Range(0, 4)], 0.15f);
                     }
-
-                }
             }
         }
         else //Ne bouge pas de gauche a droite
@@ -128,29 +141,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", 0f);
         }
 
-        if (!isSwinging) //Nest pas en train de se balancer
-        {
-            Debug.Log("Is not swinging!");
-            //if (!groundCheck) return;
-
-            isJumping = Input.GetKeyDown(KeyCode.W);
-            if (isJumping && !groundCheck && extraJumps > 0)
-            {
-                Debug.Log("isJumping");
-                rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump
-                extraJumps--;
-            }
-            else if (isJumping && groundCheck)
-            {
-                Debug.Log("isJumping2");
-                rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump 
-            }
-
-            if (groundCheck)
-            {
-                extraJumps = extraJumpsValue;
-            }
-        }
     }
 
     void LockZAxis()

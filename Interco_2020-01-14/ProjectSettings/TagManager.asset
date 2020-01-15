@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Clock
+  - HUD
+  - TutoText1
+  - TutoText2
+  - TutoText3
   layers:
   - Default
   - TransparentFX
