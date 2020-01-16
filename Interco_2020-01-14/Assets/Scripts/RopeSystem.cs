@@ -25,6 +25,7 @@ public class RopeSystem : MonoBehaviour
         public float bulletSpeed = 1f;
         public float ropeLength = 100f;
         public bool climbable = false;
+        public Transform ropePosition;
 
         private bool shooting = false;
         private Vector2 bulletPosition;
@@ -349,8 +350,7 @@ public class RopeSystem : MonoBehaviour
                                 }
                                 else
                                 {
-                                        // Player position
-                                        ropeRenderer.SetPosition(i, transform.position);
+                                        ropeRenderer.SetPosition(i, ropePosition.position);
                                 }
                         }
                 }
