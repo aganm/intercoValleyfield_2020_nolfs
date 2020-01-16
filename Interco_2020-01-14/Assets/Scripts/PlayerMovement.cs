@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         if (!isSwinging) //Nest pas en train de se balancer
         {
 
-            isJumping = Input.GetKeyDown(KeyCode.W);
+            isJumping = Input.GetKeyDown(KeyCode.Space);
             if (isJumping && !groundCheck && extraJumps > 0)
             {
                 rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump
