@@ -11,6 +11,7 @@ TagManager:
   - TutoText3
   - TutoTag4
   - TutoText4
+  - door
   layers:
   - Default
   - TransparentFX
