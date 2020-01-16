@@ -134,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
                     rBody.AddForce(new Vector2((horizontalInput * groundForce - rBody.velocity.x) * groundForce, 0));
                     rBody.velocity = new Vector2(rBody.velocity.x, rBody.velocity.y);
 
-                    if (horizontalInput != 0 && !AudioSource.isPlaying)
+                    if (horizontalInput != 0 && !AudioSource.isPlaying && groundCheck)
                     {
                         AudioSource.PlayOneShot(walkingClips[Random.Range(0, 4)], 0.15f);
                     }
