@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -55,21 +55,47 @@ public class PlayerMovement : MonoBehaviour
         jumpInput = Input.GetAxis("Jump");
         horizontalInput = Input.GetAxis("Horizontal");
 
-        var halfHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y;
-        groundCheck = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - halfHeight - 0.04f), Vector2.down, 0.025f);
+        var halfHeight = transform.GetComponent<CapsuleCollider2D>().bounds.extents.y/2;
+        groundCheck = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - halfHeight), Vector2.down, 0.025f);
+
+        if (!isSwinging) //Nest pas en train de se balancer
+        {
+
+            isJumping = Input.GetKeyDown(KeyCode.Space);
+            if (isJumping && !groundCheck && extraJumps > 0)
+            {
+                Debug.Log("FirstOK");
+                rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump
+                extraJumps--;
+            }
+            else if (isJumping && groundCheck)
+            {
+                Debug.Log("2ok");
+
+                rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump 
+            }
+
+            if (groundCheck)
+            {
+                extraJumps = extraJumpsValue;
+            }
+        }
     }
 
     void FixedUpdate()
     {
         if (horizontalInput < 0f || horizontalInput > 0f) //Si on bouge de gauche a droite
         {
-            animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
-            playerSprite.flipX = horizontalInput < 0f;
+            animator.SetBool("playerMoving", true);
 
-            if (playerSprite.flipX != lastDirection && !isSwinging)
+            bool lastGo = horizontalInput < 0f;
+
+            if (lastGo != lastDirection && !isSwinging)
             {
                 rBody.velocity = new Vector2(rBody.velocity.x * -1, rBody.velocity.y);
-
+                if(lastGo) transform.rotation = new Quaternion(0f, -180f, 0f, 0f );
+                else transform.rotation = new Quaternion(0f, 0f, 0f, 0f );
+                Debug.Log(transform.localScale.x);
             }
 
             lastDirection = horizontalInput < 0f;
@@ -78,7 +104,6 @@ public class PlayerMovement : MonoBehaviour
 
             if (isSwinging)
             {
-                Debug.Log("IsSwinging");
                 animator.SetBool("IsSwinging", true);
 
                 var playerToHookDirection = (ropeHook - (Vector2)transform.position).normalized;
@@ -103,8 +128,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 animator.SetBool("IsSwinging", false);
-                if (groundCheck) //Si touche le sol
-                {
+
                     var groundForce = speed * 2f;
 
                     rBody.AddForce(new Vector2((horizontalInput * groundForce - rBody.velocity.x) * groundForce, 0));
@@ -112,45 +136,15 @@ public class PlayerMovement : MonoBehaviour
 
                     if (horizontalInput != 0 && !AudioSource.isPlaying)
                     {
-                        int random = Random.Range(0, 4);
-                        if (random == 0) AudioSource.PlayOneShot(walkingClips[0]);
-                        else if (random == 1) AudioSource.PlayOneShot(walkingClips[1]);
-                        else if (random == 2) AudioSource.PlayOneShot(walkingClips[2]);
-                        else if (random == 3) AudioSource.PlayOneShot(walkingClips[3]);
+                        AudioSource.PlayOneShot(walkingClips[Random.Range(0, 4)], 0.15f);
                     }
-
-                }
             }
         }
         else //Ne bouge pas de gauche a droite
         {
-            animator.SetBool("IsSwinging", false);
-            animator.SetFloat("Speed", 0f);
+            animator.SetBool("playerMoving", false);
         }
 
-        if (!isSwinging) //Nest pas en train de se balancer
-        {
-            Debug.Log("Is not swinging!");
-            //if (!groundCheck) return;
-
-            isJumping = Input.GetKeyDown(KeyCode.W);
-            if (isJumping && !groundCheck && extraJumps > 0)
-            {
-                Debug.Log("isJumping");
-                rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump
-                extraJumps--;
-            }
-            else if (isJumping && groundCheck)
-            {
-                Debug.Log("isJumping2");
-                rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump 
-            }
-
-            if (groundCheck)
-            {
-                extraJumps = extraJumpsValue;
-            }
-        }
     }
 
     void LockZAxis()

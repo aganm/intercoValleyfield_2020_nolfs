@@ -41,7 +41,6 @@ public class LifeComponent : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Collision");
         if (col.gameObject.tag.Equals("Enemy")){
             CurrentHealth -= 1;
             Destroy(col.gameObject);
