@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     bool checkCounter()
     {
         if (GetComponent<ClockCountDown>().ElapsedTime >
-            GetComponent<ClockCountDown>().levelTime / 2) return true; //Should return true if more than half of the time is passed
+            GetComponent<ClockCountDown>().levelTime / 3) return true; //Should return true if more than half of the time is passed
         else return false;
     }
 
