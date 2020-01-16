@@ -55,8 +55,8 @@ public class PlayerMovement : MonoBehaviour
         jumpInput = Input.GetAxis("Jump");
         horizontalInput = Input.GetAxis("Horizontal");
 
-        var halfHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y;
-        groundCheck = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - halfHeight - 0.04f), Vector2.down, 0.025f);
+        var halfHeight = transform.GetComponent<CapsuleCollider2D>().bounds.extents.y/2;
+        groundCheck = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - halfHeight), Vector2.down, 0.025f);
 
         if (!isSwinging) //Nest pas en train de se balancer
         {
@@ -64,11 +64,14 @@ public class PlayerMovement : MonoBehaviour
             isJumping = Input.GetKeyDown(KeyCode.Space);
             if (isJumping && !groundCheck && extraJumps > 0)
             {
+                Debug.Log("FirstOK");
                 rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump
                 extraJumps--;
             }
             else if (isJumping && groundCheck)
             {
+                Debug.Log("2ok");
+
                 rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump 
             }
 
@@ -83,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (horizontalInput < 0f || horizontalInput > 0f) //Si on bouge de gauche a droite
         {
-            animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
+            animator.SetBool("playerMoving", true);
             playerSprite.flipX = horizontalInput < 0f;
 
             if (playerSprite.flipX != lastDirection && !isSwinging)
@@ -136,8 +139,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else //Ne bouge pas de gauche a droite
         {
-            animator.SetBool("IsSwinging", false);
-            animator.SetFloat("Speed", 0f);
+            animator.SetBool("playerMoving", false);
         }
 
     }
