@@ -13,7 +13,7 @@ public class SpawnBoss : MonoBehaviour
     {
         Debug.Log("isSpawn");
         boss = GameObject.Instantiate(boss);
-        boss.transform.position = spawnPoint.position;
+        boss.transform.position = transform.position;
     }
 
     // Update is called once per frame
@@ -21,4 +21,6 @@ public class SpawnBoss : MonoBehaviour
     {
         boss.GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0);
     }
+
+    
 }
