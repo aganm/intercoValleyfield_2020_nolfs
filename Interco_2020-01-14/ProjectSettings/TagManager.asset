@@ -9,6 +9,8 @@ TagManager:
   - TutoText1
   - TutoText2
   - TutoText3
+  - TutoTag4
+  - TutoText4
   layers:
   - Default
   - TransparentFX

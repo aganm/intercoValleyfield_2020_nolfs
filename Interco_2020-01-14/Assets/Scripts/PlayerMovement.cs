@@ -98,7 +98,6 @@ public class PlayerMovement : MonoBehaviour
 
             if (isSwinging)
             {
-                Debug.Log("IsSwinging");
                 animator.SetBool("IsSwinging", true);
 
                 var playerToHookDirection = (ropeHook - (Vector2)transform.position).normalized;
