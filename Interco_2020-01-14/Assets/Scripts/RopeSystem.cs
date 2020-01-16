@@ -192,7 +192,7 @@ public class RopeSystem : MonoBehaviour
                 bulletDirection = aimDirection;
                 bulletPosition = playerPosition;
                 ropeAttached = true;
-                AudioSource.PlayOneShot(HookClips[Random.Range(0, 2)]);
+                AudioSource.PlayOneShot(HookClips[Random.Range(0, 2)],0.5f);
                 AudioSource.PlayOneShot(SwingingClip);
                 return;
 

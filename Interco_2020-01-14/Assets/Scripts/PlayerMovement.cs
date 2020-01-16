@@ -141,8 +141,6 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetBool("groundCheck", groundCheck);
         animator.SetBool("playerMoving", horizontalInput < 0f || horizontalInput > 0f);
-        Debug.Log(horizontalInput < 0f || horizontalInput > 0f);
-        Debug.Log(groundCheck);
 
     }
 
