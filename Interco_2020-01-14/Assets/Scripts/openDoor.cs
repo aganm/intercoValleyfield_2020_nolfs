@@ -35,5 +35,6 @@ public class openDoor : MonoBehaviour
         {
             caveLight.SetActive(true);
         }
+        GameObject.FindGameObjectWithTag("boss").SetActive(true);
     }
 }

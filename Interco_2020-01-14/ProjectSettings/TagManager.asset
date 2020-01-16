@@ -12,6 +12,8 @@ TagManager:
   - TutoTag4
   - TutoText4
   - door
+  - caveLight
+  - worldLight
   layers:
   - Default
   - TransparentFX
