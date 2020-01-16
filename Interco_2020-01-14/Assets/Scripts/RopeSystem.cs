@@ -25,6 +25,7 @@ public class RopeSystem : MonoBehaviour
         public float bulletSpeed = 1f;
         public float ropeLength = 100f;
         public bool climbable = false;
+        public Transform ropePosition;
 
         private bool shooting = false;
         private Vector2 bulletPosition;
@@ -192,7 +193,7 @@ public class RopeSystem : MonoBehaviour
                 bulletDirection = aimDirection;
                 bulletPosition = playerPosition;
                 ropeAttached = true;
-                AudioSource.PlayOneShot(HookClips[Random.Range(0, 2)]);
+                AudioSource.PlayOneShot(HookClips[Random.Range(0, 2)],0.5f);
                 AudioSource.PlayOneShot(SwingingClip);
                 return;
 
@@ -326,15 +327,15 @@ public class RopeSystem : MonoBehaviour
                                                 }
                                                 else
                                                 {
-                                                        var ropePosition = ropePositions[ropePositions.Count - 1];
-                                                        ropeHingeAnchorRb.transform.position = ropePosition;
-                                                        if (!distanceSet)
-                                                        {
-                                                                ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
-                                                                distanceSet = true;
-                                                        }
+                                                    var ropePosition = ropePositions[ropePositions.Count - 1];
+                                                    ropeHingeAnchorRb.transform.position = ropePosition;
+                                                    if (!distanceSet)
+                                                    {
+                                                        ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
+                                                        distanceSet = true;
+                                                    }
                                                 }
-                                        }
+                    }
                                         else if (i - 1 == ropePositions.IndexOf(ropePositions.Last()))
                                         {
                                                 // if the line renderer position we're on is meant for the current anchor/hinge point...
@@ -349,8 +350,7 @@ public class RopeSystem : MonoBehaviour
                                 }
                                 else
                                 {
-                                        // Player position
-                                        ropeRenderer.SetPosition(i, transform.position);
+                                        ropeRenderer.SetPosition(i, ropePosition.position);
                                 }
                         }
                 }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -55,13 +55,13 @@ public class PlayerMovement : MonoBehaviour
         jumpInput = Input.GetAxis("Jump");
         horizontalInput = Input.GetAxis("Horizontal");
 
-        var halfHeight = transform.GetComponent<SpriteRenderer>().bounds.extents.y;
-        groundCheck = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - halfHeight - 0.04f), Vector2.down, 0.025f);
+        var halfHeight = transform.GetComponent<CapsuleCollider2D>().bounds.extents.y/2;
+        groundCheck = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - halfHeight), Vector2.down, 0.025f);
 
         if (!isSwinging) //Nest pas en train de se balancer
         {
 
-            isJumping = Input.GetKeyDown(KeyCode.W);
+            isJumping = Input.GetKeyDown(KeyCode.Space);
             if (isJumping && !groundCheck && extraJumps > 0)
             {
                 rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump
@@ -76,6 +76,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 extraJumps = extraJumpsValue;
             }
+
+
         }
     }
 
@@ -83,13 +85,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (horizontalInput < 0f || horizontalInput > 0f) //Si on bouge de gauche a droite
         {
-            animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
-            playerSprite.flipX = horizontalInput < 0f;
 
-            if (playerSprite.flipX != lastDirection && !isSwinging)
+            bool lastGo = horizontalInput < 0f;
+
+            if (lastGo != lastDirection && !isSwinging)
             {
                 rBody.velocity = new Vector2(rBody.velocity.x * -1, rBody.velocity.y);
-
+                if(lastGo) transform.rotation = new Quaternion(0f, -180f, 0f, 0f );
+                else transform.rotation = new Quaternion(0f, 0f, 0f, 0f );
             }
 
             lastDirection = horizontalInput < 0f;
@@ -98,7 +101,6 @@ public class PlayerMovement : MonoBehaviour
 
             if (isSwinging)
             {
-                Debug.Log("IsSwinging");
                 animator.SetBool("IsSwinging", true);
 
                 var playerToHookDirection = (ropeHook - (Vector2)transform.position).normalized;
@@ -129,17 +131,16 @@ public class PlayerMovement : MonoBehaviour
                     rBody.AddForce(new Vector2((horizontalInput * groundForce - rBody.velocity.x) * groundForce, 0));
                     rBody.velocity = new Vector2(rBody.velocity.x, rBody.velocity.y);
 
-                    if (horizontalInput != 0 && !AudioSource.isPlaying)
+                    if (horizontalInput != 0 && !AudioSource.isPlaying && groundCheck)
                     {
                         AudioSource.PlayOneShot(walkingClips[Random.Range(0, 4)], 0.15f);
                     }
             }
         }
-        else //Ne bouge pas de gauche a droite
-        {
-            animator.SetBool("IsSwinging", false);
-            animator.SetFloat("Speed", 0f);
-        }
+        //else //Ne bouge pas de gauche a droite
+
+        animator.SetBool("groundCheck", groundCheck);
+        animator.SetBool("playerMoving", horizontalInput < 0f || horizontalInput > 0f);
 
     }
 

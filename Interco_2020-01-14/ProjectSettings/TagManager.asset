@@ -9,6 +9,11 @@ TagManager:
   - TutoText1
   - TutoText2
   - TutoText3
+  - TutoTag4
+  - TutoText4
+  - door
+  - caveLight
+  - worldLight
   - TextHaut
   - TextAtt
   layers:
@@ -47,4 +52,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3590094951
+    locked: 0
+  - name: Foreground
+    uniqueID: 3608202949
     locked: 0
