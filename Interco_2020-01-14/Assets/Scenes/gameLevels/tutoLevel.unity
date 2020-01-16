@@ -9113,21 +9113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   success: 0
---- !u!111 &1103297872
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103297853}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 597809620de0acc4cbd59a279377a9b3, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1001 &1113879266
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -326,15 +326,15 @@ public class RopeSystem : MonoBehaviour
                                                 }
                                                 else
                                                 {
-                                                        var ropePosition = ropePositions[ropePositions.Count - 1];
-                                                        ropeHingeAnchorRb.transform.position = ropePosition;
-                                                        if (!distanceSet)
-                                                        {
-                                                                ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
-                                                                distanceSet = true;
-                                                        }
+                                                    var ropePosition = ropePositions[ropePositions.Count - 1];
+                                                    ropeHingeAnchorRb.transform.position = ropePosition;
+                                                    if (!distanceSet)
+                                                    {
+                                                        ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
+                                                        distanceSet = true;
+                                                    }
                                                 }
-                                        }
+                    }
                                         else if (i - 1 == ropePositions.IndexOf(ropePositions.Last()))
                                         {
                                                 // if the line renderer position we're on is meant for the current anchor/hinge point...
