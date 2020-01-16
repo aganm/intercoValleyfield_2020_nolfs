@@ -87,12 +87,15 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalInput < 0f || horizontalInput > 0f) //Si on bouge de gauche a droite
         {
             animator.SetBool("playerMoving", true);
-            playerSprite.flipX = horizontalInput < 0f;
 
-            if (playerSprite.flipX != lastDirection && !isSwinging)
+            bool lastGo = horizontalInput < 0f;
+
+            if (lastGo != lastDirection && !isSwinging)
             {
                 rBody.velocity = new Vector2(rBody.velocity.x * -1, rBody.velocity.y);
-
+                if(lastGo) transform.rotation = new Quaternion(0f, -180f, 0f, 0f );
+                else transform.rotation = new Quaternion(0f, 0f, 0f, 0f );
+                Debug.Log(transform.localScale.x);
             }
 
             lastDirection = horizontalInput < 0f;
