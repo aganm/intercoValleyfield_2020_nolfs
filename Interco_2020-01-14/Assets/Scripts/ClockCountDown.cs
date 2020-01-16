@@ -13,6 +13,7 @@ public class ClockCountDown : MonoBehaviour
     private float timer = 0;
     private int H, M;
     public int ElapsedTime = 0;
+    public bool toLate = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class ClockCountDown : MonoBehaviour
                 else
                     GameObject.FindGameObjectWithTag("Clock").GetComponent<Text>().color = Color.white;
             }
+            toLate = true;
         }
         if (timer > lastUpdateTime + 1)
         {

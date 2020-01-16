@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Clock
   - HUD
+  - door
   layers:
   - Default
   - TransparentFX
