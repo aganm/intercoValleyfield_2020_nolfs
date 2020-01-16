@@ -13,7 +13,9 @@ public class ClockCountDown : MonoBehaviour
     private float timer = 0;
     private int H, M;
     public int ElapsedTime = 0;
-    public bool toLate = false;
+    public bool timesUp = false;
+    public AudioSource audioSource;
+    public AudioClip AudioClip;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,13 @@ public class ClockCountDown : MonoBehaviour
         
         if (H >= 19)
         {
+            if (timesUp == false)
+            {
+                Debug.Log("TimeUps x1");
+                audioSource.Stop();
+            }
+
+            timesUp = true;
             GameObject.FindGameObjectWithTag("Clock").GetComponent<Text>().text = "19 H 00";
             if (timer > lastUpdateTime + 1)
             {
@@ -39,9 +48,12 @@ public class ClockCountDown : MonoBehaviour
                 else
                     GameObject.FindGameObjectWithTag("Clock").GetComponent<Text>().color = Color.white;
             }
-            toLate = true;
+            if (!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(AudioClip);
+            }
         }
-        if (timer > lastUpdateTime + 1)
+        if (timer > lastUpdateTime + 1 && !timesUp)
         {
             M += (int)timeMultiplier;
             ElapsedTime++;

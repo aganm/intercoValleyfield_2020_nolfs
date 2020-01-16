@@ -99,7 +99,6 @@ public class RopeSystem : MonoBehaviour
                 {
                         if (Vector2.Distance(playerPosition, bulletPosition) > ropeLength)
                         {
-                                print("f");
                                 CancelShooting();
                         }
                         else

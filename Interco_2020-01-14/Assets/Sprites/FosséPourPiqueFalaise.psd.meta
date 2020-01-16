@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: a81cb579c728b074585ec1dbb1370a99
+=======
 guid: 8920c78b49f242d4c9d61bb30d62a12c
+>>>>>>> Kerven
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
