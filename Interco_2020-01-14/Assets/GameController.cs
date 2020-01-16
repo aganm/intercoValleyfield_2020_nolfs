@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public AudioClip Track2;
 
     private bool round2IsStarted;
+    public int SablierCollected = 0;
 
 
     // Start is called before the first frame update
