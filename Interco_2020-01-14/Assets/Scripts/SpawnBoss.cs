@@ -13,7 +13,10 @@ public class SpawnBoss : MonoBehaviour
     {
         Debug.Log("isSpawn");
         boss = GameObject.Instantiate(boss);
-        boss.transform.position = transform.position;
+        float playerX = GameObject.FindGameObjectWithTag("Player").gameObject.transform.position.x -30;
+        boss.transform.position = new Vector2(playerX, 0);
+       
+        
     }
 
     // Update is called once per frame

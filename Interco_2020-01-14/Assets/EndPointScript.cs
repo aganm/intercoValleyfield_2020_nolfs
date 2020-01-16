@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndPointScript : MonoBehaviour
 {
@@ -24,13 +25,13 @@ public class EndPointScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Victory");
         if(other.tag == "Player")
         {
-            isFinished = true;
-            VictoryMenu.SetActive(true);
-            Time.timeScale = 0f;
-            AudioSource.Play();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //isFinished = true;
+            //VictoryMenu.SetActive(true);
+            //Time.timeScale = 0f;
+            //AudioSource.Play();
         }
     }
 

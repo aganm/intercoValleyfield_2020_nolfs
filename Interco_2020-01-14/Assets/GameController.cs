@@ -35,11 +35,10 @@ public class GameController : MonoBehaviour
     }
 
     void StartSecondRound()
-    {
-        Debug.Log("Second Round strated");
+    {       
         round2IsStarted = true;
         AudioSource.Stop();
         AudioSource.PlayOneShot(Track2);
-        //Change backgroun or colour (dark ambiance)
+        GameObject.FindGameObjectWithTag("boss").GetComponent<SpawnBoss>().enabled = true;
     }
 }
