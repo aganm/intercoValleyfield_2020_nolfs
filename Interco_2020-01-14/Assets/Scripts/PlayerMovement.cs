@@ -64,14 +64,11 @@ public class PlayerMovement : MonoBehaviour
             isJumping = Input.GetKeyDown(KeyCode.Space);
             if (isJumping && !groundCheck && extraJumps > 0)
             {
-                Debug.Log("FirstOK");
                 rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump
                 extraJumps--;
             }
             else if (isJumping && groundCheck)
             {
-                Debug.Log("2ok");
-
                 rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed); //jump 
             }
 
@@ -79,6 +76,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 extraJumps = extraJumpsValue;
             }
+
+
         }
     }
 
@@ -86,7 +85,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (horizontalInput < 0f || horizontalInput > 0f) //Si on bouge de gauche a droite
         {
-            animator.SetBool("playerMoving", true);
 
             bool lastGo = horizontalInput < 0f;
 
@@ -95,7 +93,6 @@ public class PlayerMovement : MonoBehaviour
                 rBody.velocity = new Vector2(rBody.velocity.x * -1, rBody.velocity.y);
                 if(lastGo) transform.rotation = new Quaternion(0f, -180f, 0f, 0f );
                 else transform.rotation = new Quaternion(0f, 0f, 0f, 0f );
-                Debug.Log(transform.localScale.x);
             }
 
             lastDirection = horizontalInput < 0f;
@@ -140,10 +137,12 @@ public class PlayerMovement : MonoBehaviour
                     }
             }
         }
-        else //Ne bouge pas de gauche a droite
-        {
-            animator.SetBool("playerMoving", false);
-        }
+        //else //Ne bouge pas de gauche a droite
+
+        animator.SetBool("groundCheck", groundCheck);
+        animator.SetBool("playerMoving", horizontalInput < 0f || horizontalInput > 0f);
+        Debug.Log(horizontalInput < 0f || horizontalInput > 0f);
+        Debug.Log(groundCheck);
 
     }
 
