@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Tests/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
-    path: Assets/Scenes/Tests/XavTestScene.unity
+    path: Assets/Scenes/Testing/XavTestScene.unity
     guid: 7d89078dd0404554983354ab4c31640b
   - enabled: 1
     path: Assets/Scenes/HomeMenu.unity
