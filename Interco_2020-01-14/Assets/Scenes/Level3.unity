@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1398,12 +1398,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202666772}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1, y: -27.4, z: 2.25}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.1, y: -27, z: 2.25}
   m_LocalScale: {x: 3.735221, y: 3.735221, z: 3.735221}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 911932794}
+  m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &203790168
 PrefabInstance:
@@ -4878,7 +4878,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &775432821
 PrefabInstance:
@@ -5895,7 +5895,7 @@ Transform:
   - {fileID: 2112939128}
   - {fileID: 1083094138}
   - {fileID: 500725799}
-  - {fileID: 1817731297}
+  - {fileID: 202666774}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8035,7 +8035,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1817731297}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12894,8 +12895,8 @@ Transform:
   m_LocalPosition: {x: 95.2, y: 4.13, z: -1}
   m_LocalScale: {x: 1.9609, y: 1.9609, z: 1.9609}
   m_Children: []
-  m_Father: {fileID: 911932794}
-  m_RootOrder: 73
+  m_Father: {fileID: 1141799382}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1820788762
 GameObject:
@@ -16296,7 +16297,12 @@ PrefabInstance:
         type: 3}
       propertyPath: boss
       value: 
-      objectReference: {fileID: 3183126714913246205, guid: 931e05f1ed0ff94438efe3e2b7671d05,
+      objectReference: {fileID: 3183126714913246205, guid: cede310b3d5cbe543812555e3cb28b0c,
         type: 3}
+    - target: {fileID: 580126313972230655, guid: 6dc72d0513d43a445a49061d701e0196,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc72d0513d43a445a49061d701e0196, type: 3}
