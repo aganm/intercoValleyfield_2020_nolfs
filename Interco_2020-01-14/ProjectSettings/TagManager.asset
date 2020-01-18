@@ -27,12 +27,12 @@ TagManager:
   - UI
   - 
   - 
+  - Fog
   - BossLayer
   - Player
   - Platforms
   - Traps
   - PostProcessing
-  - 
   - 
   - 
   - 
@@ -63,4 +63,7 @@ TagManager:
     locked: 0
   - name: Platforms
     uniqueID: 2217916289
+    locked: 0
+  - name: Fog
+    uniqueID: 2288984647
     locked: 0
