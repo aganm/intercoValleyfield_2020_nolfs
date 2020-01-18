@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6ae8034f18e5d48bc8c6490e34d71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 3183126714913246205, guid: 931e05f1ed0ff94438efe3e2b7671d05, type: 3}
+  boss: {fileID: 3183126714913246205, guid: cede310b3d5cbe543812555e3cb28b0c, type: 3}
   spawnPoint: {fileID: 0}
   speed: 2.5
