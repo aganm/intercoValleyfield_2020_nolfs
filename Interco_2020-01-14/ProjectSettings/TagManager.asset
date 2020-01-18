@@ -17,6 +17,7 @@ TagManager:
   - boss
   - TextHaut
   - TextAtt
+  - Enemy
   layers:
   - Default
   - TransparentFX
