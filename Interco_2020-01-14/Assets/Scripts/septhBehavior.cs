@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class septhBehavior : MonoBehaviour
+public class SepthBehavior : MonoBehaviour
 {
-    private openDoor code;
+    private OpenDoor code;
 
     // Start is called before the first frame update
     void Start()
     {
-        code = GetComponent<openDoor>();
+        code = GetComponent<OpenDoor>();
     }
 
     // Update is called once per frame

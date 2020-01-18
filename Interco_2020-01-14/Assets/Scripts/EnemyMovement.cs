@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemyMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public float walkSpeed;      // Walkspeed
     public float maxLeft = 0.0f;       // Define maxLeft

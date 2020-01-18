@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraMouvements : MonoBehaviour {
+public class CameraMovements : MonoBehaviour {
 
     public GameObject target;
     public float smoothSpeed = 10f;

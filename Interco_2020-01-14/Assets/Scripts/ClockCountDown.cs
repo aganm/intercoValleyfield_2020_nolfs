@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClockCountDown : MonoBehaviour
+public class ClockCountdown : MonoBehaviour
 {
     public float startTime = 0f; //Hour of the day
     public float levelTime = 0f; //In seconds ??

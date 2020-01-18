@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class openDoor : MonoBehaviour
+public class OpenDoor : MonoBehaviour
 {
     public GameObject caveLight;
     public GameObject door;

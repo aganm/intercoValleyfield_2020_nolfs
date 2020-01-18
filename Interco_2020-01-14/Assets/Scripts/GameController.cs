@@ -29,8 +29,8 @@ public class GameController : MonoBehaviour
 
     bool checkCounter()
     {
-        if (GetComponent<ClockCountDown>().ElapsedTime >
-            GetComponent<ClockCountDown>().levelTime / 3) return true; //Should return true if more than half of the time is passed
+        if (GetComponent<ClockCountdown>().ElapsedTime >
+            GetComponent<ClockCountdown>().levelTime / 3) return true; //Should return true if more than half of the time is passed
         else return false;
     }
 

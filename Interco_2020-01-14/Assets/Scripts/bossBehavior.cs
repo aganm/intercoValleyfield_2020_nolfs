@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class bossBehavior : MonoBehaviour
+public class BossBehavior : MonoBehaviour
 {
     public float YOffset = 0;
     // Start is called before the first frame update
