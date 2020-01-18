@@ -31,12 +31,12 @@ public class RopeSystem : MonoBehaviour
         private Vector2 bulletPosition;
         private Vector2 bulletDirection;
 
-    //Audio attr
-    public AudioSource AudioSource;
-    public AudioClip[] HookClips;
-    public AudioClip SwingingClip;
+        //Audio attr
+        public AudioSource AudioSource;
+        public AudioClip[] HookClips;
+        public AudioClip SwingingClip;
 
-    void Awake()
+        void Awake()
         {
                 ropeJoint.enabled = false;
                 playerPosition = transform.position;
@@ -193,7 +193,7 @@ public class RopeSystem : MonoBehaviour
                 bulletDirection = aimDirection;
                 bulletPosition = playerPosition;
                 ropeAttached = true;
-                AudioSource.PlayOneShot(HookClips[Random.Range(0, 2)],0.5f);
+                AudioSource.PlayOneShot(HookClips[Random.Range(0, 2)], 0.5f);
                 AudioSource.PlayOneShot(SwingingClip);
                 return;
 
@@ -220,7 +220,7 @@ public class RopeSystem : MonoBehaviour
                 //        ropeJoint.enabled = false;
                 //}
 
-        
+
 
         }
 
@@ -243,7 +243,7 @@ public class RopeSystem : MonoBehaviour
 
                 if (Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.W))
                 {
-            AudioSource.Stop();
+                        AudioSource.Stop();
                         ResetRope();
                 }
         }
@@ -327,15 +327,15 @@ public class RopeSystem : MonoBehaviour
                                                 }
                                                 else
                                                 {
-                                                    var ropePosition = ropePositions[ropePositions.Count - 1];
-                                                    ropeHingeAnchorRb.transform.position = ropePosition;
-                                                    if (!distanceSet)
-                                                    {
-                                                        ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
-                                                        distanceSet = true;
-                                                    }
+                                                        var ropePosition = ropePositions[ropePositions.Count - 1];
+                                                        ropeHingeAnchorRb.transform.position = ropePosition;
+                                                        if (!distanceSet)
+                                                        {
+                                                                ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
+                                                                distanceSet = true;
+                                                        }
                                                 }
-                    }
+                                        }
                                         else if (i - 1 == ropePositions.IndexOf(ropePositions.Last()))
                                         {
                                                 // if the line renderer position we're on is meant for the current anchor/hinge point...

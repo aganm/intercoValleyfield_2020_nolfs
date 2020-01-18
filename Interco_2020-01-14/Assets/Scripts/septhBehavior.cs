@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class SepthBehavior : MonoBehaviour
 {
-    private OpenDoor code;
+        private OpenDoor code;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        code = GetComponent<OpenDoor>();
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+                code = GetComponent<OpenDoor>();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
 }

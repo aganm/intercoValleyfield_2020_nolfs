@@ -6,33 +6,33 @@ using UnityEngine.SceneManagement;
 public class EndPointScript : MonoBehaviour
 {
 
-    public GameObject VictoryMenu;
-    public AudioSource AudioSource;
-    public bool isFinished = false;
-    
+        public GameObject VictoryMenu;
+        public AudioSource AudioSource;
+        public bool isFinished = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Player")
+        // Start is called before the first frame update
+        void Start()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            //isFinished = true;
-            //VictoryMenu.SetActive(true);
-            //Time.timeScale = 0f;
-            //AudioSource.Play();
+
         }
-    }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        public void OnTriggerEnter2D(Collider2D other)
+        {
+                if (other.tag == "Player")
+                {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                        //isFinished = true;
+                        //VictoryMenu.SetActive(true);
+                        //Time.timeScale = 0f;
+                        //AudioSource.Play();
+                }
+        }
 
 }
