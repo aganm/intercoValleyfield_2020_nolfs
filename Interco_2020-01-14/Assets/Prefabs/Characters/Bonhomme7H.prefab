@@ -790,7 +790,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.67, y: 8.381479}
+  m_Offset: {x: -1.6700001, y: 7.8459024}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -801,7 +801,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.3, y: 22.18}
+  m_Size: {x: 4.3, y: 21.108847}
   m_EdgeRadius: 0
 --- !u!95 &1504274830
 Animator:
@@ -855,7 +855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57634582a0950cd4d8a6944a961a9ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YOffset: -7
 --- !u!1 &7295959737985935615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,7 +1554,7 @@ PrefabInstance:
     - target: {fileID: 5709359342600694743, guid: 04ea67a006581794f8801510ad66019a,
         type: 3}
       propertyPath: m_Name
-      value: Bonhomme7H Variant
+      value: Bonhomme7H
       objectReference: {fileID: 0}
     - target: {fileID: 5709359342600694743, guid: 04ea67a006581794f8801510ad66019a,
         type: 3}
