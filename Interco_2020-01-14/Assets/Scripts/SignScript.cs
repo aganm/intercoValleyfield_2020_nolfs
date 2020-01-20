@@ -24,7 +24,7 @@ public class SignScript : MonoBehaviour
         {
                 if (col.gameObject.tag.Equals("Player"))
                 {
-                        GameObject.FindGameObjectWithTag(TextTag).GetComponent<MeshRenderer>().enabled = true;
+                GetComponentInChildren<MeshRenderer>().enabled = true;
                 }
         }
 
@@ -33,7 +33,7 @@ public class SignScript : MonoBehaviour
         {
                 if (col.gameObject.tag.Equals("Player"))
                 {
-                        GameObject.FindGameObjectWithTag(TextTag).GetComponent<MeshRenderer>().enabled = false;
+                GetComponentInChildren<MeshRenderer>().enabled = false;
                 }
         }
 
