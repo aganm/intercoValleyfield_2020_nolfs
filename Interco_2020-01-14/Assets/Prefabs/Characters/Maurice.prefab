@@ -256,6 +256,7 @@ MonoBehaviour:
   bulletSpeed: 1
   ropeLength: 10
   climbable: 0
+  ropePosition: {fileID: 0}
   AudioSource: {fileID: 4731837489694495959}
   HookClips:
   - {fileID: 8300000, guid: dbc0100e7d8068147be7e1fd9e0b02fe, type: 3}
@@ -366,7 +367,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1817442758823366291}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: fece25449d2b14a4ca02fca3fd603ea2, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

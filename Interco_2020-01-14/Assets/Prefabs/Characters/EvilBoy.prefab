@@ -1417,12 +1417,12 @@ PrefabInstance:
     - target: {fileID: 125944162797823327, guid: 2cda88f9b7d64cf47858cefcd5ce4d62,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.594737
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 125944162797823327, guid: 2cda88f9b7d64cf47858cefcd5ce4d62,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.47270072
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 125944162797823327, guid: 2cda88f9b7d64cf47858cefcd5ce4d62,
         type: 3}
@@ -1557,7 +1557,7 @@ PrefabInstance:
     - target: {fileID: 5251902176409768046, guid: 2cda88f9b7d64cf47858cefcd5ce4d62,
         type: 3}
       propertyPath: m_Name
-      value: EvilBoy Variant
+      value: EvilBoy
       objectReference: {fileID: 0}
     - target: {fileID: 5552250239579383397, guid: 2cda88f9b7d64cf47858cefcd5ce4d62,
         type: 3}
