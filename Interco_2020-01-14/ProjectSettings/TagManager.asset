@@ -12,6 +12,12 @@ TagManager:
   - TutoTag4
   - TutoText4
   - door
+  - caveLight
+  - worldLight
+  - boss
+  - TextHaut
+  - TextAtt
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -21,12 +27,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Fog
+  - BossLayer
+  - Player
+  - Platforms
+  - Traps
+  - PostProcessing
   - 
   - 
   - 
@@ -54,4 +60,10 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3608202949
+    locked: 0
+  - name: Platforms
+    uniqueID: 2217916289
+    locked: 0
+  - name: Fog
+    uniqueID: 2288984647
     locked: 0

@@ -4,37 +4,37 @@ using UnityEngine;
 
 public class SignScript : MonoBehaviour
 {
-    public string TextTag;
+        public string TextTag;
 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag.Equals("Player"))
+        // Start is called before the first frame update
+        void Start()
         {
-            GameObject.FindGameObjectWithTag(TextTag).GetComponent<MeshRenderer>().enabled = true;
+
         }
-    }
 
-
-    public void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.gameObject.tag.Equals("Player"))
+        // Update is called once per frame
+        void Update()
         {
-            GameObject.FindGameObjectWithTag(TextTag).GetComponent<MeshRenderer>().enabled = false;
+
         }
-    }
+
+        public void OnTriggerEnter2D(Collider2D col)
+        {
+                if (col.gameObject.tag.Equals("Player"))
+                {
+                        GameObject.FindGameObjectWithTag(TextTag).GetComponent<MeshRenderer>().enabled = true;
+                }
+        }
+
+
+        public void OnTriggerExit2D(Collider2D col)
+        {
+                if (col.gameObject.tag.Equals("Player"))
+                {
+                        GameObject.FindGameObjectWithTag(TextTag).GetComponent<MeshRenderer>().enabled = false;
+                }
+        }
 
 }
