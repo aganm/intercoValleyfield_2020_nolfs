@@ -140,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
                 //else //Ne bouge pas de gauche a droite
 
                 animator.SetBool("groundCheck", groundCheck);
-                animator.SetBool("playerMoving", horizontalInput < 0f || horizontalInput > 0f);
+                animator.SetBool("playerMoving", horizontalInput != 0f);
 
         }
 
